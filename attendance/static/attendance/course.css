@@ -1,0 +1,35 @@
+/* course.css */
+
+/* Custom styles for course page */
+
+/* Subject card */
+.subject-card {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.subject-card p {
+    margin-bottom: 5px;
+}
+
+.subject-card form {
+    margin-top: 10px;
+}
+
+.subject-card hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Move edit and delete buttons to the right */
+.subject-card .actions {
+    text-align: right;
+}
+
+/* Increase spacing between buttons */
+.subject-card form button {
+    margin-bottom: 5px;
+}

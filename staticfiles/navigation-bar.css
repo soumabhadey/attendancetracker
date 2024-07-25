@@ -1,0 +1,30 @@
+/* Customizing navbar */
+.custom-navbar {
+    height: auto; /* Set the navbar height to auto */
+    border-radius: 10px;
+}
+
+/* Customizing navbar-brand */
+.navbar-brand {
+    font-size: 1.8rem; /* Increase font size */
+}
+
+/* Customizing navbar links */
+.navbar-nav .nav-link {
+    font-size: 1.2rem; /* Increase font size */
+    color: #333; /* Change link color */
+    transition: color 0.3s; /* Smooth transition on color change */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Change link color on hover */
+}
+
+/* Customizing toggler icon */
+.navbar-toggler {
+    border-color: #007bff; /* Change toggler color */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 123, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

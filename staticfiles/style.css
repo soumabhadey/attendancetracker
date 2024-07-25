@@ -1,0 +1,57 @@
+/* Main Content */
+main {
+    padding-top: 50px; /* Adjust for navbar height */
+    min-height: calc(100vh - 100px); /* 100% viewport height minus navbar height */
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Header */
+header {
+    padding: 20px; /* Adding padding to the header */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40; /* Dark gray background */
+    color: white; /* White text color */
+    padding: 2rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        padding-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    main {
+        padding-top: 20px; /* Adjust for smaller screen */
+    }
+}
+
+.teachers-regular-italic {
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

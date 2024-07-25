@@ -1,0 +1,17 @@
+<!-- sidebar.html -->
+<div class="sidebar">
+    <h3>Quick Links</h3>
+    <ul class="list-unstyled">
+        
+            <li><a href="{% url 'home' %}">Home</a></li>
+			{% if request.user.is_authenticated %}
+            <li><a href="{% url 'attendance' %}">Attendance</a></li>
+            <li><a href="{% url 'edit-user' %}">Edit Profile</a></li>
+            <li><a href="{% url 'delete-user' %}">Delete Profile</a></li>
+            <li><a href="{% url 'logout-user' %}">Logout</a></li>
+        {% else %}
+            <li><a href="{% url 'login-user' %}">Login</a></li>
+            <li><a href="{% url 'register-user' %}">Register</a></li>
+        {% endif %}
+    </ul>
+</div>

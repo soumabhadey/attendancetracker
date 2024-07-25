@@ -1,0 +1,27 @@
+/* styles.css */
+.card-title a {
+    color: #007bff; /* Blue color for links */
+}
+
+.card-title a:hover {
+    text-decoration: none;
+    color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+}
+
+.course-card {
+    background-color: #f8f9fa; /* Background color for course cards */
+}
+
+.course-buttons {
+    text-align: right; /* Align buttons to the right */
+}

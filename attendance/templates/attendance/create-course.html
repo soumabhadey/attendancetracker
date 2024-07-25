@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% block content %}
+{% if request.user.is_authenticated %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="card-title">Create Course</h2>
+                </div>
+                <div class="card-body">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="btn btn-primary btn-block mt-3" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="alert alert-danger">
+                <p class="mb-0">You need to login to view this page.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock content %}

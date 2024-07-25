@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container">
+	{% if request.user.is_authenticated %}
+	<h2>Subjects</h2>
+	<div class="mb-3">
+		<a href="{% url 'create-subject' id=id %}" class="btn btn-primary">+ Create Subject</a>
+	</div>
+
+	{% for subject in subjects %}
+	<div class="subject-card">
+		<p><strong>{{ subject.name }}</strong> -- {{ subject.attendancepercent }}%</p>
+		<p>Present: {{ subject.present }}</p>
+		<p>Absent: {{ subject.absent }}</p>
+		<form action="" method="POST">
+			{% csrf_token %}
+			<input type="hidden" value="{{ subject.id }}" name="subject_id">
+			<button type="submit" class="btn btn-success" name="status" value="Present">Present</button>
+			<button type="submit" class="btn btn-danger" name="status" value="Absent">Absent</button>
+		</form>
+		<div class="actions">
+			<a href="{% url 'edit-subject' id=id subjectId=subject.id %}" class="btn btn-secondary btn-sm">Edit</a>
+			<a href="{% url 'delete-subject' id=id subjectId=subject.id %}" class="btn btn-danger btn-sm">Delete</a>
+		</div>
+	</div>
+	{% endfor %}
+	{% else %}
+	<p>You need to login.</p>
+	{% endif %}
+</div>
+{% endblock content %}

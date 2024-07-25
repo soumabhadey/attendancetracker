@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% block content %}
+{% if request.user.is_authenticated %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Are you sure you want to delete {{ obj }}?</h3>
+                    <div class="mt-4">
+                        <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-secondary">No</a>
+                        <form method="POST" action="" class="d-inline">
+                            {% csrf_token %}
+                            <input value="Yes" type="submit" class="btn btn-danger ml-2">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="alert alert-danger">
+                <p class="mb-0">You need to login.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock content %}
